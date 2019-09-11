@@ -3,7 +3,7 @@ let fs = require('fs');
 
 
 /*
-Create/Update files
+Create/Update files (Asynchronous)
 */
 
 // fs.writeFile('dummy.txt', 'Hello World!', (err, file) => {
