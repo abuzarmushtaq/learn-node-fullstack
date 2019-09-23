@@ -4,13 +4,13 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Seperate code into modules aka files
-const adminRoutes = require('./routes/admin');
-const shopRoutes = require('./routes/shop');
+const getRoutes = require('./routes/get');
+const postRoutes = require('./routes/post');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(adminRoutes);
-app.use(shopRoutes);
+app.use(getRoutes);
+app.use(postRoutes);
 
 app.use((req, res, next) => {
     // .status(404) function for handling 404 req
