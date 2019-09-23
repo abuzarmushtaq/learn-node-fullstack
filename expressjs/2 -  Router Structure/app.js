@@ -7,8 +7,12 @@ const app = express();
 const getRoutes = require('./routes/get');
 const postRoutes = require('./routes/post');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
+/**
+ * app.use('/route-name', getRoutes);
+ * '/route-name' is used for filtering routes
+*/
 app.use(getRoutes);
 app.use(postRoutes);
 
